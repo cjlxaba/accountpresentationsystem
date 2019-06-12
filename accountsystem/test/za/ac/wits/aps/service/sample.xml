@@ -1,0 +1,49 @@
+<scrape-session>
+<base-url>www.telkom.co.za</base-url>
+<date>10/01/2008</date>
+<time>13:50:00</time>
+<datapair id="001">
+<text>Account no</text>
+<value>53844946068883</value>
+</datapair>
+<datapair id="002">
+<text>Service ref</text>
+<value>0117838898</value>
+</datapair>
+<datapair id="003">
+<text>Previous Invoice</text>
+<value>R512.22</value>
+</datapair>
+<datapair id="004">
+<text>Payment</text>
+<value>R513.00</value>
+</datapair>
+<datapair id="005">
+<text>Opening Balance</text>
+<value>R0.78</value>
+</datapair>
+<datapair id="006">
+<text>Account holder name</text>
+<value>XXXXX</value>
+</datapair>
+<datapair id="007">
+<text>Statement date</text>
+<value>54545454548</value>
+</datapair>
+<datapair id="008">
+<text>Statement number</text>
+<value>5655656645</value>
+</datapair>
+<datapair id="009">
+<text>statement month</text>
+<value>45</value>
+</datapair>
+<datapair id="010">
+<text>Total due</text>
+<value>R89.78</value>
+</datapair>
+<datapair id="011">
+<text>Date Due</text>
+<value>2345</value>
+</datapair>
+</scrape-session>
