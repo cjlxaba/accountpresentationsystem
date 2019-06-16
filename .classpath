@@ -7,5 +7,29 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/document-generator.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.converter-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.converter.docx.xwpf-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.core-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.document-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.document.docx-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.itext.extension-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.template-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/fr.opensagres.xdocreport.template.velocity-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/velocity-1.7.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/chilkat.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/org.apache.poi.xwpf.converter.core-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/org.apache.poi.xwpf.converter.pdf-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/org.apache.poi.xwpf.converter.xhtml-1.0.4.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/ooxml-schemas-1.1.jar"/>
+	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/itext-2.1.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
