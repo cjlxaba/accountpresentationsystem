@@ -14,6 +14,7 @@ public class DocumentGenerator {
 		
 		String documentPath = "/home/phillip/git/accountpresentationsystem/accountsystem/WebContent/WEB-INF/CUPL_QUOTE.docx";
 		
+		
 		DocBean docBean = new DocBean();
 		docBean.setCurrentDate("YOUYOFDOU");
 
