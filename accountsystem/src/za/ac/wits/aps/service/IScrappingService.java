@@ -6,4 +6,6 @@ import java.util.List;
 public interface IScrappingService {
  
 	public List <String> scanDirectoryById (String idNumber) throws IOException;
+	
+	public void execute () throws Exception;
 }
