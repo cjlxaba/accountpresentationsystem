@@ -6,8 +6,6 @@ package za.ac.wits.scraper.trigger;
 import java.io.IOException;
 import java.util.Timer;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import za.ac.wits.aps.service.ScraperSchedulerTask;
 

@@ -14,6 +14,7 @@ public class DocumentGenerator {
 		
 		String documentPath = "C:\\Users\\f4780027\\Documents\\school\\Elen 7045 software development,analyses and methodologies\\statement.docx";
 		
+		
 		DocBean docBean = new DocBean();
 		docBean.setCurrentDate("2019/09/12");
 		

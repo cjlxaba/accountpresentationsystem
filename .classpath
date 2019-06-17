@@ -31,5 +31,6 @@
 	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/ooxml-schemas-1.1.jar"/>
 	<classpathentry kind="lib" path="accountsystem/WebContent/WEB-INF/lib/itext-2.1.7.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
