@@ -3,6 +3,7 @@
  */
 package za.ac.wits.aps.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import za.ac.wits.domain.customer.UserCredential;
@@ -32,12 +33,8 @@ public class CustomerService implements ICustomer {
 				String authKey =  EncryptionUtil.TripleDESEncryptAndHEXEncode(username + ":" + md5Password);
 				
 				UserCredential userCredential = new UserCredential();
-	
-
 				userCredential.setTokenKey(authKey);
-				
 				userCredential.setUser(getUserDetailsByAuthKey(contextPath, authKey));
-				
 				return userCredential;
 				
 			}		
@@ -69,9 +66,11 @@ public class CustomerService implements ICustomer {
 	}
 
 	@Override
-	public List<UserCredential> getUsersRegisteredForBilling() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<User> getUsersRegisteredForBilling( String contextPath) throws IOException {
+		
+		 List <User> users = new CustomerDAO().retriveAllUsers(contextPath);
+		 
+		return users;
 	}	
 	
  }

@@ -5,7 +5,7 @@ package za.ac.wits.aps.service;
 
 import java.util.List;
 
-import za.ac.wits.domain.customer.UserCredential;
+import za.ac.wits.domain.customer.User;
 
 /**
  * @author f4780027
@@ -13,5 +13,5 @@ import za.ac.wits.domain.customer.UserCredential;
  */
 public interface ICustomer {
 
-	List <UserCredential> getUsersRegisteredForBilling() ;
+	List <User> getUsersRegisteredForBilling(String contextPath) throws Exception;
 }

@@ -34,6 +34,10 @@ public class CustomerDAO {
 	
 	private static final String USER_DETAILS_FILE_PATH = "WEB-INF/DataFiles/UserDetails.xlsx";
 
+	private static final String FILE_NAME = "/tmp/users.xlsx";
+	
+	String  contextPathTest = "C:\\Users\\f4780027\\git\\accountpresentationsystem\\accountsystem\\WebContent\\";
+
 	public boolean authenticateUser(String contextPath, String username, String userPassword) throws FileNotFoundException, IOException {
 
 		String filePath = contextPath + CREDETIALS_FILE_PATH;
@@ -78,46 +82,35 @@ public class CustomerDAO {
 		return userMap.get(authKey);
 	}
 
-	private static final String FILE_NAME = "/tmp/users.xlsx";
+	public List<User> retriveAllUsers(String contextPath) throws IOException {
+		String filePath = contextPath + USER_DETAILS_FILE_PATH;
 
-	public List <UserCredential> retriveAllUsers() throws IOException{
-		
-		UserCredential user = new UserCredential();
-		List <UserCredential> users = new ArrayList<>();
-		FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
+		FileInputStream excelFile = new FileInputStream(new File(filePath));
 		Workbook workBook = new XSSFWorkbook(excelFile);
 		Sheet dataTypeSheet = workBook.getSheetAt(0);
 		Iterator<Row> iterator = dataTypeSheet.iterator();
-		
-		while (iterator.hasNext()){
-			 Row nextRow = iterator.next();
-	         Iterator<Cell> cellIterator = nextRow.cellIterator();
-			   while (cellIterator.hasNext()) {
-	                Cell cell = cellIterator.next();
-	                 
-	                switch (cell.getCellType()) {
-	                    case Cell.CELL_TYPE_STRING:
-	                        cell.getStringCellValue();
-	                        break;
-	                    case Cell.CELL_TYPE_BOOLEAN:
-	                        cell.getBooleanCellValue();
-	                        break;
-	                    case Cell.CELL_TYPE_NUMERIC:
-	                        cell.getNumericCellValue();
-	                        break;
-	                }
-	                System.out.print(" - ");
-	            }
-	            System.out.println();
-	        }
 
-	return null;
+		List<User> users = new ArrayList<>();
+
+		while (iterator.hasNext()) {
+
+			Row currentRow = iterator.next();
+			User user = new User();
+			user.setIdNumber(currentRow.getCell(1).getStringCellValue());
+			user.setName(currentRow.getCell(2).getStringCellValue());
+			user.setSurname(currentRow.getCell(3).getStringCellValue());
+			user.setEmail(currentRow.getCell(4).getStringCellValue());
+			user.setAcountNumber(currentRow.getCell(5).getStringCellValue());
+			users.add(user);
+		}
+
+		return users;
 
 }
 	
-	public boolean authorizeUserForScraping(UserCredential credential) throws Exception {
+	public boolean authorizeUserForScraping(User credential) throws Exception {
 
-		for (UserCredential user : retriveAllUsers()) {
+		for (User user : retriveAllUsers(USER_DETAILS_FILE_PATH)) {
 
 			if (user == null) {
 
@@ -133,10 +126,10 @@ public class CustomerDAO {
 
 	}
 
-	private static boolean compareUser(UserCredential user, UserCredential request) {
+	private static boolean compareUser(User user, User request) {
 
-		if (user.getTokenKey().equalsIgnoreCase(request.getTokenKey())
-				&& user.getUser().getIdNumber().equalsIgnoreCase(request.getUser().getIdNumber())) {
+		if (user.getIdNumber().equalsIgnoreCase(request.getIdNumber())
+				&& user.getIdNumber().equalsIgnoreCase(request.getIdNumber())) {
 
 			return true;
 		}
