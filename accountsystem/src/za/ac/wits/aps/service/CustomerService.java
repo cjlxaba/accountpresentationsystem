@@ -3,6 +3,11 @@
  */
 package za.ac.wits.aps.service;
 
+import java.io.IOException;
+import java.util.List;
+
+import za.ac.wits.domain.customer.UserCredential;
+
 import za.ac.wits.aps.repository.CustomerDAO;
 import za.ac.wits.domain.customer.EncryptionUtil;
 import za.ac.wits.domain.customer.PasswordMD5;
@@ -28,11 +33,8 @@ public class CustomerService implements ICustomer {
 				String authKey =  EncryptionUtil.TripleDESEncryptAndHEXEncode(username + ":" + md5Password);
 				
 				UserCredential userCredential = new UserCredential();
-
 				userCredential.setTokenKey(authKey);
-				
 				userCredential.setUser(getUserDetailsByAuthKey(contextPath, authKey));
-				
 				return userCredential;
 				
 			}		
@@ -61,6 +63,14 @@ public class CustomerService implements ICustomer {
 		}
 		
 		return null; 
+	}
+
+	@Override
+	public List<User> getUsersRegisteredForBilling( String contextPath) throws IOException {
+		
+		 List <User> users = new CustomerDAO().retriveAllUsers(contextPath);
+		 
+		return users;
 	}	
 	
  }

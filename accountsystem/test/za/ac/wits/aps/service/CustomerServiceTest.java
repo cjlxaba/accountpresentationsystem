@@ -5,7 +5,10 @@ import java.util.List;
 
 import org.junit.Test;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/cjlxaba/accountpresentationsystem
 import za.ac.wits.domain.customer.User;
 import za.ac.wits.domain.customer.UserCredential;
 
