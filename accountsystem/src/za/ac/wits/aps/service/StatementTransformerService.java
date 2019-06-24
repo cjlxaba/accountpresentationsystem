@@ -10,5 +10,10 @@ package za.ac.wits.aps.service;
 public class StatementTransformerService implements IStatementService{
 
 	
+	public StatementTransformerService (String statementType , Object statement){
+		
+		
+	}
+	
 	
 }

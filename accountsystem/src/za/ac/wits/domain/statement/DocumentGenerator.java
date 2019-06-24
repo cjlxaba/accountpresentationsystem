@@ -16,7 +16,7 @@ public class DocumentGenerator {
 		
 		
 		DocBean docBean = new DocBean();
-		docBean.setCurrentDate("2019/09/12");
+		docBean.setCurrentDate("Soweto");
 		
 
 		ByteArrayOutputStream out = (ByteArrayOutputStream) generator.generateDocument(documentPath,"statement", docBean);

@@ -8,5 +8,7 @@ package za.ac.wits.aps.service;
  *
  */
 public class LoggingService implements ILoggingService{
+	
+	
 
 }

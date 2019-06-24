@@ -21,7 +21,11 @@ public class ScrapeSession {
 	@XmlElement(name = "time", required = true)
 	private String time;
 	
+	@XmlElement (name ="responseCode" , required = true)
+	private String responseCode;
+	
 	@XmlElement(name = "datapair", required = true)
+	
 	private List<Datapair> datapairs;
 
 	public String getBaseUrl() {
@@ -46,5 +50,13 @@ public class ScrapeSession {
 
 	public void setTime(String time) {
 		this.time = time;
+	}
+
+	public String getResponseCode() {
+		return responseCode;
+	}
+
+	public void setResponseCode(String responseCode) {
+		this.responseCode = responseCode;
 	}	
 }
